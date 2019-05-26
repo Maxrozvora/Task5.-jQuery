@@ -21,7 +21,7 @@ const schedule = {
     },
 
     getArriveCity() {
-        const n = prompt('Введіть кількість поїздів', 20);
+        const n = 20;
 
         if ( n > 20 || n <= 0 || isNaN(n)) {
             alert('Ви ввели неправильне значення')
@@ -136,8 +136,8 @@ const schedule = {
       <td>${item.to}</td>
       <td>${item.day}</td>
       <td class="timer" data-timer="${item.departure.left}">${item.departure.left}</td>
-      <td>
-        <div>${item.departure.day}</div>
+      <td class="departure">
+        ${item.departure.day}
         </td>
       <td>
         <div>${item.arrive.day}</div>
