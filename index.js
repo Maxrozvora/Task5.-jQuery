@@ -131,7 +131,7 @@ const schedule = {
         let tr = '';
         for (let item of data) {
             const itemRow = `<tr>
-      <td>${item.number}</td>
+      <td class="number">${item.number}</td>
       <td>${item.from}</td>
       <td>${item.to}</td>
       <td>${item.day}</td>

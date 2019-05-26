@@ -10,9 +10,7 @@ $(document).ready(function() {
     })
 
     function tableSearch(value) {
-        const td =  $('td.departure');
-
-        
+        const td =  $('td.departure');        
         $.each(td,function (i, item) {
             const itemVale = item.innerText
             const valueDate = new Date(value).toLocaleDateString();
@@ -22,4 +20,17 @@ $(document).ready(function() {
             }
         })
     }
+
+    const trainNumber = $('.number')
+    for(let item of trainNumber) {
+        const elem = $(item);
+        const value = elem.text().slice(0, 3)
+        if (value < 500) {
+            elem.attr('title', 'Звичайний');
+        } else {
+            elem.attr('title', 'Фірмовий');
+        }
+    }
+
+    trainNumber.tooltip();
 });
