@@ -72,12 +72,11 @@ const schedule = {
             'day': dayOfWeek[date.getDay()],
             'departure': {
                 'left': new Date(date).getTime(),
-                'day': this.getDayOfWeek(date),
+                'day': new Date(date),
                 'time': this.getTimeFormat(date)
             },
             'arrive': {
-                'day': this.getDayOfWeek(arriveTime),
-                'time': this.getTimeFormat(arriveTime)
+                'day': new Date(arriveTime),
             },
             'cost': cost
         };
@@ -139,11 +138,9 @@ const schedule = {
       <td class="timer" data-timer="${item.departure.left}">${item.departure.left}</td>
       <td>
         <div>${item.departure.day}</div>
-        <div>${item.departure.time}</div>
         </td>
       <td>
         <div>${item.arrive.day}</div>
-        <div>${item.arrive.time}</div>
         </td>
       <td>${item.cost}</td>
     </tr>`
