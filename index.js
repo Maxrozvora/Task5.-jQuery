@@ -217,13 +217,6 @@ schedule.init();
 
 saveTrain(data, 'test.json');
 
-$(document).ready(function()
-    {
-        $("#myTable").tablesorter();
-        $( "#datepicker" ).datepicker();
-    }
-);
-
 
 
 
