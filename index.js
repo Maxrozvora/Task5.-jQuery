@@ -72,11 +72,11 @@ const schedule = {
             'day': dayOfWeek[date.getDay()],
             'departure': {
                 'left': new Date(date).getTime(),
-                'day': new Date(date),
+                'day': new Date(arriveTime).toLocaleString(),
                 'time': this.getTimeFormat(date)
             },
             'arrive': {
-                'day': new Date(arriveTime),
+                'day': new Date(arriveTime).toLocaleString(),
             },
             'cost': cost
         };
@@ -220,6 +220,7 @@ saveTrain(data, 'test.json');
 $(document).ready(function()
     {
         $("#myTable").tablesorter();
+        $( "#datepicker" ).datepicker();
     }
 );
 
